@@ -17,7 +17,7 @@ var mongo = require('mongodb').MongoClient
 var url = 'mongodb://' + process.env.IP + ':27017/learnyoumongo'
 var minAge = parseInt(process.argv[2], 10)
 
-mongo.connect(url, function(err, db) {
+mongo.connect(url, function (err, db) {
     var collection = db.collection('parrots')
     
     if (err) throw err
